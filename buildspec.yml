@@ -7,7 +7,10 @@ phases:
   build:
     commands:
       - echo "Package & Dependicies are getting installed"
-      - npm -f install
+      - sudo apt-get -y update
+      - sudo apt install nodejs -y
+      - sudo apt install npm -y
+      - sudo npm install pm2@latest -g
       - echo "Packages have been installed"
       - echon "Storing Build Artifact to the Location"
 artifacts:
